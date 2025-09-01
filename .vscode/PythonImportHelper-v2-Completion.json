@@ -1,0 +1,833 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "ASCENDING",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "ASCENDING",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "ASCENDING",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "json_util",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "re,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re.",
+        "description": "re.",
+        "detail": "re.",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "BulkWriteError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "ask_ollama",
+        "kind": 2,
+        "importPath": "api.utils.ollama_client",
+        "description": "api.utils.ollama_client",
+        "peekOfCode": "def ask_ollama(prompt: str, model: str = \"mistral\") -> str:\n    payload = {\n        \"model\": model,\n        \"prompt\": prompt,\n        \"stream\": False\n    }\n    try:\n        response = requests.post(OLLAMA_URL, json=payload, timeout=60)\n        response.raise_for_status()\n        return response.json().get(\"response\", \"\").strip()",
+        "detail": "api.utils.ollama_client",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_URL",
+        "kind": 5,
+        "importPath": "api.utils.ollama_client",
+        "description": "api.utils.ollama_client",
+        "peekOfCode": "OLLAMA_URL = \"http://ollama:11434/api/generate\"\ndef ask_ollama(prompt: str, model: str = \"mistral\") -> str:\n    payload = {\n        \"model\": model,\n        \"prompt\": prompt,\n        \"stream\": False\n    }\n    try:\n        response = requests.post(OLLAMA_URL, json=payload, timeout=60)\n        response.raise_for_status()",
+        "detail": "api.utils.ollama_client",
+        "documentation": {}
+    },
+    {
+        "label": "AskRequest",
+        "kind": 6,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "class AskRequest(BaseModel):\n    prompt: str\n# ---------- MODELO ----------\nclass Store(BaseModel):\n    store_id: int\n    hub_id: int\n    store_name: str\n    store_segment: str\n    store_plan_price: float\n    store_latitude: float",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "Store",
+        "kind": 6,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "class Store(BaseModel):\n    store_id: int\n    hub_id: int\n    store_name: str\n    store_segment: str\n    store_plan_price: float\n    store_latitude: float\n    store_longitude: float\n# ---------- CRUD ----------\n@app.post(\"/stores\")",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "create_store",
+        "kind": 2,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "def create_store(store: Store) -> Store:\n    if stores.find_one({\"store_id\": store.store_id}):\n        raise HTTPException(400, detail=\"store_id já existe\")\n    stores.insert_one(store.dict())\n    return store\n@app.get(\"/stores/{store_id}\")\ndef read_store(store_id: int) -> Store:\n    doc = stores.find_one({\"store_id\": store_id})\n    if not doc:\n        raise HTTPException(404, detail=\"Loja não encontrada\")",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "read_store",
+        "kind": 2,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "def read_store(store_id: int) -> Store:\n    doc = stores.find_one({\"store_id\": store_id})\n    if not doc:\n        raise HTTPException(404, detail=\"Loja não encontrada\")\n    doc[\"_id\"] = str(doc[\"_id\"])\n    return doc\n@app.put(\"/stores/{store_id}\")\ndef update_store(store_id: int, store: Store):\n    result = stores.update_one({\"store_id\": store_id}, {\"$set\": store.dict()})\n    if result.matched_count == 0:",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "update_store",
+        "kind": 2,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "def update_store(store_id: int, store: Store):\n    result = stores.update_one({\"store_id\": store_id}, {\"$set\": store.dict()})\n    if result.matched_count == 0:\n        raise HTTPException(404, detail=\"Loja não encontrada\")\n    return {\"msg\": \"Loja atualizada\"}\n@app.delete(\"/stores/{store_id}\")\ndef delete_store(store_id: int):\n    result = stores.delete_one({\"store_id\": store_id})\n    if result.deleted_count == 0:\n        raise HTTPException(404, detail=\"Loja não encontrada\")",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "delete_store",
+        "kind": 2,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "def delete_store(store_id: int):\n    result = stores.delete_one({\"store_id\": store_id})\n    if result.deleted_count == 0:\n        raise HTTPException(404, detail=\"Loja não encontrada\")\n    return {\"msg\": \"Loja deletada\"}\n@app.get(\"/orders\")\ndef get_orders(\n    store_id: int | None = None,\n    channel_id: int | None = None,\n    order_status: str | None = None,",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_orders",
+        "kind": 2,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "def get_orders(\n    store_id: int | None = None,\n    channel_id: int | None = None,\n    order_status: str | None = None,\n    limit: int = 10,\n):\n    query = {}\n    if store_id is not None:\n        query[\"store_id\"] = store_id\n    if channel_id is not None:",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "ask_stores",
+        "kind": 2,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "def ask_stores(req: AskRequest):\n    payload = {\n        \"model\": \"mistral\",\n        \"stream\": False,\n        \"prompt\": f\"\"\"\n        Você é um tradutor de linguagem natural para MongoDB.\n        Responda SOMENTE com um JSON válido que represente o filtro.\n        NUNCA adicione explicações ou texto fora do JSON.\n        Coleção: stores\n        Igualdade: {DICT_IGUALDADE}",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "app = FastAPI(title=\"DATALK Stores CRUD + Ollama\")\nMONGO_URI = os.getenv(\"MONGO_URI\", \"mongodb://mongo:27017\")\nDB_NAME = \"datalk\"\nCOLL_STORES = \"stores\"\nCOLL_ORDERS = \"orders\"\nOLLAMA_URL = os.getenv(\"OLLAMA_URL\", \"http://ollama:11434/api/generate\")\nDICT_IGUALDADE = {\n    \"store_id\": \"id\",\n    \"hub_id\": \"hub id\",\n    \"store_name\": \"nome da loja\",",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "MONGO_URI = os.getenv(\"MONGO_URI\", \"mongodb://mongo:27017\")\nDB_NAME = \"datalk\"\nCOLL_STORES = \"stores\"\nCOLL_ORDERS = \"orders\"\nOLLAMA_URL = os.getenv(\"OLLAMA_URL\", \"http://ollama:11434/api/generate\")\nDICT_IGUALDADE = {\n    \"store_id\": \"id\",\n    \"hub_id\": \"hub id\",\n    \"store_name\": \"nome da loja\",\n    \"store_segment\": \"segmento\",",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "DB_NAME = \"datalk\"\nCOLL_STORES = \"stores\"\nCOLL_ORDERS = \"orders\"\nOLLAMA_URL = os.getenv(\"OLLAMA_URL\", \"http://ollama:11434/api/generate\")\nDICT_IGUALDADE = {\n    \"store_id\": \"id\",\n    \"hub_id\": \"hub id\",\n    \"store_name\": \"nome da loja\",\n    \"store_segment\": \"segmento\",\n    \"store_plan_price\": \"preço\",",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "COLL_STORES",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "COLL_STORES = \"stores\"\nCOLL_ORDERS = \"orders\"\nOLLAMA_URL = os.getenv(\"OLLAMA_URL\", \"http://ollama:11434/api/generate\")\nDICT_IGUALDADE = {\n    \"store_id\": \"id\",\n    \"hub_id\": \"hub id\",\n    \"store_name\": \"nome da loja\",\n    \"store_segment\": \"segmento\",\n    \"store_plan_price\": \"preço\",\n    \"store_latitude\": \"latitud\",",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "COLL_ORDERS",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "COLL_ORDERS = \"orders\"\nOLLAMA_URL = os.getenv(\"OLLAMA_URL\", \"http://ollama:11434/api/generate\")\nDICT_IGUALDADE = {\n    \"store_id\": \"id\",\n    \"hub_id\": \"hub id\",\n    \"store_name\": \"nome da loja\",\n    \"store_segment\": \"segmento\",\n    \"store_plan_price\": \"preço\",\n    \"store_latitude\": \"latitud\",\n    \"store_longitude\": \"logitude\",",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_URL",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "OLLAMA_URL = os.getenv(\"OLLAMA_URL\", \"http://ollama:11434/api/generate\")\nDICT_IGUALDADE = {\n    \"store_id\": \"id\",\n    \"hub_id\": \"hub id\",\n    \"store_name\": \"nome da loja\",\n    \"store_segment\": \"segmento\",\n    \"store_plan_price\": \"preço\",\n    \"store_latitude\": \"latitud\",\n    \"store_longitude\": \"logitude\",\n}",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "DICT_IGUALDADE",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "DICT_IGUALDADE = {\n    \"store_id\": \"id\",\n    \"hub_id\": \"hub id\",\n    \"store_name\": \"nome da loja\",\n    \"store_segment\": \"segmento\",\n    \"store_plan_price\": \"preço\",\n    \"store_latitude\": \"latitud\",\n    \"store_longitude\": \"logitude\",\n}\nDICT_TIPO = {",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "DICT_TIPO",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "DICT_TIPO = {\n    \"store_id\": \"int\",\n    \"hub_id\": \"int\",\n    \"store_name\": \"str\",\n    \"store_segment\": \"str\",\n    \"store_plan_price\": \"float\",\n    \"store_latitude\": \"float\",\n    \"store_longitude\": \"float\",\n}\nclient = MongoClient(MONGO_URI)",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "client = MongoClient(MONGO_URI)\ndb = client[DB_NAME]\nstores = db[COLL_STORES]\norders = db[COLL_ORDERS]\nclass AskRequest(BaseModel):\n    prompt: str\n# ---------- MODELO ----------\nclass Store(BaseModel):\n    store_id: int\n    hub_id: int",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "db = client[DB_NAME]\nstores = db[COLL_STORES]\norders = db[COLL_ORDERS]\nclass AskRequest(BaseModel):\n    prompt: str\n# ---------- MODELO ----------\nclass Store(BaseModel):\n    store_id: int\n    hub_id: int\n    store_name: str",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "stores",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "stores = db[COLL_STORES]\norders = db[COLL_ORDERS]\nclass AskRequest(BaseModel):\n    prompt: str\n# ---------- MODELO ----------\nclass Store(BaseModel):\n    store_id: int\n    hub_id: int\n    store_name: str\n    store_segment: str",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "orders",
+        "kind": 5,
+        "importPath": "api.main",
+        "description": "api.main",
+        "peekOfCode": "orders = db[COLL_ORDERS]\nclass AskRequest(BaseModel):\n    prompt: str\n# ---------- MODELO ----------\nclass Store(BaseModel):\n    store_id: int\n    hub_id: int\n    store_name: str\n    store_segment: str\n    store_plan_price: float",
+        "detail": "api.main",
+        "documentation": {}
+    },
+    {
+        "label": "normalize",
+        "kind": 2,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "def normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:\n        if col in df.columns:\n            # parse rápido e determinístico; strings vazias viram NaT -> depois None\n            df[col] = pd.to_datetime(df[col], format=FORMAT_US_AMPM, errors=\"coerce\")\n    # trocar NaT/NaN por None para o Mongo aceitar\n    df = df.replace({pd.NaT: None}).where(df.notnull(), None)\n    return df\ndef create_indexes(coll):\n    coll.create_index([(\"order_id\", ASCENDING)], unique=True, name=\"uq_order_id\")",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "create_indexes",
+        "kind": 2,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "def create_indexes(coll):\n    coll.create_index([(\"order_id\", ASCENDING)], unique=True, name=\"uq_order_id\")\n    coll.create_index([(\"store_id\", ASCENDING)], name=\"idx_store_id\")\n    coll.create_index([(\"channel_id\", ASCENDING)], name=\"idx_channel_id\")\n    coll.create_index([(\"order_status\", ASCENDING)], name=\"idx_order_status\")\n    coll.create_index(\n        [\n            (\"order_created_year\", ASCENDING),\n            (\"order_created_month\", ASCENDING),\n            (\"order_created_day\", ASCENDING),",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "def main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começamos do zero neste passo\n    orders_coll.drop()\n    stores_coll.drop()\n    chunksize = 50_000",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "ORDERS_PATH = \"/data/orders.csv\"  # o CSV montado via volume\nSTORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "STORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "MONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "DB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "ORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",\n    \"order_moment_delivered\",",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "STORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",\n    \"order_moment_delivered\",\n    \"order_moment_finished\",",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "DATETIME_COLS",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "DATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",\n    \"order_moment_delivered\",\n    \"order_moment_finished\",\n]",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT_US_AMPM",
+        "kind": 5,
+        "importPath": "ingest.ingest",
+        "description": "ingest.ingest",
+        "peekOfCode": "FORMAT_US_AMPM = \"%m/%d/%Y %I:%M:%S %p\"\ndef normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:\n        if col in df.columns:\n            # parse rápido e determinístico; strings vazias viram NaT -> depois None\n            df[col] = pd.to_datetime(df[col], format=FORMAT_US_AMPM, errors=\"coerce\")\n    # trocar NaT/NaN por None para o Mongo aceitar\n    df = df.replace({pd.NaT: None}).where(df.notnull(), None)\n    return df\ndef create_indexes(coll):",
+        "detail": "ingest.ingest",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_types",
+        "kind": 2,
+        "importPath": "ingest.ingest_data",
+        "description": "ingest.ingest_data",
+        "peekOfCode": "def normalize_types(df: pd.DataFrame) -> pd.DataFrame:\n    # Converte timestamps\n    for col in DATETIME_COLS:\n        if col in df.columns:\n            df[col] = pd.to_datetime(df[col], errors=\"coerce\", utc=True)\n    # Nulos -> None (para o Mongo)\n    df = df.where(pd.notnull(df), None)\n    return df\ndef create_indexes(coll):\n    # Índices úteis para consultas futuras",
+        "detail": "ingest.ingest_data",
+        "documentation": {}
+    },
+    {
+        "label": "create_indexes",
+        "kind": 2,
+        "importPath": "ingest.ingest_data",
+        "description": "ingest.ingest_data",
+        "peekOfCode": "def create_indexes(coll):\n    # Índices úteis para consultas futuras\n    coll.create_index([(\"order_id\", ASCENDING)], unique=True, name=\"uq_order_id\")\n    coll.create_index([(\"store_id\", ASCENDING)], name=\"idx_store_id\")\n    coll.create_index([(\"channel_id\", ASCENDING)], name=\"idx_channel_id\")\n    coll.create_index([(\"order_status\", ASCENDING)], name=\"idx_order_status\")\n    coll.create_index([(\"order_created_year\", ASCENDING),\n                       (\"order_created_month\", ASCENDING),\n                       (\"order_created_day\", ASCENDING)], name=\"idx_created_ymd\")\ndef main():",
+        "detail": "ingest.ingest_data",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ingest.ingest_data",
+        "description": "ingest.ingest_data",
+        "peekOfCode": "def main():\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    coll = db[COLL_NAME]\n    # Leitura por chunks para economizar RAM\n    chunksize = 50_000\n    total = 0\n    print(f\"[INGEST] Lendo CSV em chunks de {chunksize} linhas…\")\n    reader = pd.read_csv(CSV_PATH, chunksize=chunksize)\n    for i, df in enumerate(reader, start=1):",
+        "detail": "ingest.ingest_data",
+        "documentation": {}
+    },
+    {
+        "label": "CSV_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_data",
+        "description": "ingest.ingest_data",
+        "peekOfCode": "CSV_PATH = os.environ.get(\"CSV_PATH\", \"/data/orders_dataset.csv\")\nMONGO_URI = os.environ.get(\"MONGO_URI\", \"mongodb://mongo:27017\")\nDB_NAME   = os.environ.get(\"DB_NAME\", \"datalk\")\nCOLL_NAME = os.environ.get(\"COLL_NAME\", \"orders\")\n# Colunas de timestamp em texto -> datetime\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",",
+        "detail": "ingest.ingest_data",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "ingest.ingest_data",
+        "description": "ingest.ingest_data",
+        "peekOfCode": "MONGO_URI = os.environ.get(\"MONGO_URI\", \"mongodb://mongo:27017\")\nDB_NAME   = os.environ.get(\"DB_NAME\", \"datalk\")\nCOLL_NAME = os.environ.get(\"COLL_NAME\", \"orders\")\n# Colunas de timestamp em texto -> datetime\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]",
+        "detail": "ingest.ingest_data",
+        "documentation": {}
+    },
+    {
+        "label": "COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_data",
+        "description": "ingest.ingest_data",
+        "peekOfCode": "COLL_NAME = os.environ.get(\"COLL_NAME\", \"orders\")\n# Colunas de timestamp em texto -> datetime\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]\ndef normalize_types(df: pd.DataFrame) -> pd.DataFrame:\n    # Converte timestamps",
+        "detail": "ingest.ingest_data",
+        "documentation": {}
+    },
+    {
+        "label": "DATETIME_COLS",
+        "kind": 5,
+        "importPath": "ingest.ingest_data",
+        "description": "ingest.ingest_data",
+        "peekOfCode": "DATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]\ndef normalize_types(df: pd.DataFrame) -> pd.DataFrame:\n    # Converte timestamps\n    for col in DATETIME_COLS:\n        if col in df.columns:",
+        "detail": "ingest.ingest_data",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ingest.ingest_step1_min",
+        "description": "ingest.ingest_step1_min",
+        "peekOfCode": "def main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começa do zero para teste\n    orders_coll.drop()\n    stores_coll.drop()\n    # 3) Lê só 1.000 linhas para testar o caminho",
+        "detail": "ingest.ingest_step1_min",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step1_min",
+        "description": "ingest.ingest_step1_min",
+        "peekOfCode": "ORDERS_PATH = \"/data/orders.csv\"  # o CSV montado via volume\nSTORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]",
+        "detail": "ingest.ingest_step1_min",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step1_min",
+        "description": "ingest.ingest_step1_min",
+        "peekOfCode": "STORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]",
+        "detail": "ingest.ingest_step1_min",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "ingest.ingest_step1_min",
+        "description": "ingest.ingest_step1_min",
+        "peekOfCode": "MONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]",
+        "detail": "ingest.ingest_step1_min",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step1_min",
+        "description": "ingest.ingest_step1_min",
+        "peekOfCode": "DB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começa do zero para teste",
+        "detail": "ingest.ingest_step1_min",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step1_min",
+        "description": "ingest.ingest_step1_min",
+        "peekOfCode": "ORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começa do zero para teste\n    orders_coll.drop()",
+        "detail": "ingest.ingest_step1_min",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step1_min",
+        "description": "ingest.ingest_step1_min",
+        "peekOfCode": "STORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começa do zero para teste\n    orders_coll.drop()\n    stores_coll.drop()",
+        "detail": "ingest.ingest_step1_min",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ingest.ingest_step2_chunks",
+        "description": "ingest.ingest_step2_chunks",
+        "peekOfCode": "def main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começamos do zero neste passo\n    orders_coll.drop()\n    stores_coll.drop()\n    chunksize = 50_000",
+        "detail": "ingest.ingest_step2_chunks",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step2_chunks",
+        "description": "ingest.ingest_step2_chunks",
+        "peekOfCode": "ORDERS_PATH = \"/data/orders.csv\"  # o CSV montado via volume\nSTORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]",
+        "detail": "ingest.ingest_step2_chunks",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step2_chunks",
+        "description": "ingest.ingest_step2_chunks",
+        "peekOfCode": "STORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]",
+        "detail": "ingest.ingest_step2_chunks",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "ingest.ingest_step2_chunks",
+        "description": "ingest.ingest_step2_chunks",
+        "peekOfCode": "MONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]",
+        "detail": "ingest.ingest_step2_chunks",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step2_chunks",
+        "description": "ingest.ingest_step2_chunks",
+        "peekOfCode": "DB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começamos do zero neste passo",
+        "detail": "ingest.ingest_step2_chunks",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step2_chunks",
+        "description": "ingest.ingest_step2_chunks",
+        "peekOfCode": "ORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começamos do zero neste passo\n    orders_coll.drop()",
+        "detail": "ingest.ingest_step2_chunks",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step2_chunks",
+        "description": "ingest.ingest_step2_chunks",
+        "peekOfCode": "STORES_COLL_NAME = \"stores\"\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começamos do zero neste passo\n    orders_coll.drop()\n    stores_coll.drop()",
+        "detail": "ingest.ingest_step2_chunks",
+        "documentation": {}
+    },
+    {
+        "label": "normalize",
+        "kind": 2,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "def normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:\n        if col in df.columns:\n            df[col] = pd.to_datetime(df[col], errors=\"coerce\", utc=True)\n    # trocamos NaN por None pro Mongo aceitar\n    return df.where(df.notnull(), None)\ndef main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "def main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começamos do zero neste passo\n    orders_coll.drop()\n    stores_coll.drop()\n    chunksize = 50_000",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "ORDERS_PATH = \"/data/orders.csv\"  # o CSV montado via volume\nSTORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "STORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "MONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "DB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]\ndef normalize(df: pd.DataFrame) -> pd.DataFrame:",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "ORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]\ndef normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "STORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]\ndef normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:\n        if col in df.columns:",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "DATETIME_COLS",
+        "kind": 5,
+        "importPath": "ingest.ingest_step3_datetime",
+        "description": "ingest.ingest_step3_datetime",
+        "peekOfCode": "DATETIME_COLS = [\n    \"order_moment_created\", \"order_moment_accepted\", \"order_moment_ready\",\n    \"order_moment_collected\", \"order_moment_in_expedition\",\n    \"order_moment_delivering\", \"order_moment_delivered\",\n    \"order_moment_finished\",\n]\ndef normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:\n        if col in df.columns:\n            df[col] = pd.to_datetime(df[col], errors=\"coerce\", utc=True)",
+        "detail": "ingest.ingest_step3_datetime",
+        "documentation": {}
+    },
+    {
+        "label": "normalize",
+        "kind": 2,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "def normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:\n        if col in df.columns:\n            # parse rápido e determinístico; strings vazias viram NaT -> depois None\n            df[col] = pd.to_datetime(df[col], format=FORMAT_US_AMPM, errors=\"coerce\")\n    # trocar NaT/NaN por None para o Mongo aceitar\n    df = df.replace({pd.NaT: None}).where(df.notnull(), None)\n    return df\ndef create_indexes(coll):\n    coll.create_index([(\"order_id\", ASCENDING)], unique=True, name=\"uq_order_id\")",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "create_indexes",
+        "kind": 2,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "def create_indexes(coll):\n    coll.create_index([(\"order_id\", ASCENDING)], unique=True, name=\"uq_order_id\")\n    coll.create_index([(\"store_id\", ASCENDING)], name=\"idx_store_id\")\n    coll.create_index([(\"channel_id\", ASCENDING)], name=\"idx_channel_id\")\n    coll.create_index([(\"order_status\", ASCENDING)], name=\"idx_order_status\")\n    coll.create_index(\n        [\n            (\"order_created_year\", ASCENDING),\n            (\"order_created_month\", ASCENDING),\n            (\"order_created_day\", ASCENDING),",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "def main():\n    # 1) Conecta no Mongo (NoSQL: \"DB\" -> \"Collection\" -> \"Documents JSON-like\")\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    orders_coll = db[ORDERS_COLL_NAME]\n    stores_coll = db[STORES_COLL_NAME]\n    # 2) começamos do zero neste passo\n    orders_coll.drop()\n    stores_coll.drop()\n    chunksize = 50_000",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "ORDERS_PATH = \"/data/orders.csv\"  # o CSV montado via volume\nSTORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_PATH",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "STORES_PATH = \"/data/stores.csv\"  # o CSV montado via volume\nMONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "MONGO_URI = \"mongodb://mongo:27017\"  # nome do serviço no compose\nDB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "DB_NAME = \"datalk\"\nORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "ORDERS_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "ORDERS_COLL_NAME = \"orders\"\nSTORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",\n    \"order_moment_delivered\",",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "STORES_COLL_NAME",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "STORES_COLL_NAME = \"stores\"\nDATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",\n    \"order_moment_delivered\",\n    \"order_moment_finished\",",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "DATETIME_COLS",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "DATETIME_COLS = [\n    \"order_moment_created\",\n    \"order_moment_accepted\",\n    \"order_moment_ready\",\n    \"order_moment_collected\",\n    \"order_moment_in_expedition\",\n    \"order_moment_delivering\",\n    \"order_moment_delivered\",\n    \"order_moment_finished\",\n]",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT_US_AMPM",
+        "kind": 5,
+        "importPath": "ingest.ingest_step4_indexes",
+        "description": "ingest.ingest_step4_indexes",
+        "peekOfCode": "FORMAT_US_AMPM = \"%m/%d/%Y %I:%M:%S %p\"\ndef normalize(df: pd.DataFrame) -> pd.DataFrame:\n    for col in DATETIME_COLS:\n        if col in df.columns:\n            # parse rápido e determinístico; strings vazias viram NaT -> depois None\n            df[col] = pd.to_datetime(df[col], format=FORMAT_US_AMPM, errors=\"coerce\")\n    # trocar NaT/NaN por None para o Mongo aceitar\n    df = df.replace({pd.NaT: None}).where(df.notnull(), None)\n    return df\ndef create_indexes(coll):",
+        "detail": "ingest.ingest_step4_indexes",
+        "documentation": {}
+    }
+]

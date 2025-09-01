@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434" # Porta padrão da API do Ollama
+    volumes:
+      - datalk_ollama:/root/.ollama # Persistência dos modelos baixados
+    restart: unless-stopped
+    entrypoint: ["ollama", "serve"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - datalk_mongo:/data/db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: ./api
+    container_name: datalk-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+      - ollama
+    volumes:
+      - ./api:/app
+      - ./data:/data
+      - ./ingest:/ingest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  datalk_mongo:
+  datalk_ollama:
