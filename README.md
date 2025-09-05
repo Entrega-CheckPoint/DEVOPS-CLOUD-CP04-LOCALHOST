@@ -1,4 +1,4 @@
-# DEVOPS-CLOUD-CP04-LOCALHOST
+# $DEVOPS-CLOUD-CP04-LOCALHOST$
 
 Migração completa para Docker Compose
 
@@ -150,3 +150,7 @@ docker exec -it ollama ollama pull mistral
 - Ollama não responde:
   Confirme se o modelo foi baixado (docker exec -it ollama ollama list)
   Verifique logs da api com docker compose logs datalk-api
+
+## Link do video
+
+[CP04 - Video](https://www.youtube.com/watch?v=mSqR44Tojyk)
